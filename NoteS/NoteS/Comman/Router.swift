@@ -10,6 +10,14 @@ import Foundation
 class Router{
     public static var shared = Router()
     
+    var add: AddViewController{
+        AddViewController(nibName: "AddViewController", bundle: nil)
+    }
+    
+    var home: HomeViewController{
+        HomeViewController(nibName: "HomeViewController", bundle: nil)
+    }
+    
     var signin: SignInViewController{
         SignInViewController(nibName: "SignInViewController", bundle: nil)
     }

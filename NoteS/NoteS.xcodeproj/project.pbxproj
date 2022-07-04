@@ -10,6 +10,12 @@
 		07C47E1C912CF5CE5ABD2474 /* Pods_NoteSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F9AA2203B86F39B4136B63 /* Pods_NoteSTests.framework */; };
 		19DF5B9A15EED9BE2444C1D6 /* Pods_NoteS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BD01DF24E5C1372C4847CC /* Pods_NoteS.framework */; };
 		6A053C9873C87A63BECB529A /* Pods_NoteS_NoteSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DEF5F1B75AE8A3E281E508 /* Pods_NoteS_NoteSUITests.framework */; };
+		9A13116328730B96008C9111 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A13116128730B96008C9111 /* TableViewCell.swift */; };
+		9A13116428730B96008C9111 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A13116228730B96008C9111 /* TableViewCell.xib */; };
+		9A1311772873145B008C9111 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1311762873145B008C9111 /* Note.swift */; };
+		9A13117928731591008C9111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A13117828731591008C9111 /* CoreData.framework */; };
+		9A13117D28731D02008C9111 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A13117B28731D02008C9111 /* AddViewController.swift */; };
+		9A13117E28731D02008C9111 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A13117C28731D02008C9111 /* AddViewController.xib */; };
 		9A4AD5FC286F7BB200510803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD5FB286F7BB200510803 /* AppDelegate.swift */; };
 		9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD604286F7BB200510803 /* NoteS.xcdatamodeld */; };
 		9A4AD608286F7BB400510803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD607286F7BB400510803 /* Assets.xcassets */; };
@@ -56,6 +62,12 @@
 		75486D5CA00FFD334AFB62F8 /* Pods-NoteS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteS.release.xcconfig"; path = "Target Support Files/Pods-NoteS/Pods-NoteS.release.xcconfig"; sourceTree = "<group>"; };
 		77D437020017F269E11415DE /* Pods-NoteS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteS.debug.xcconfig"; path = "Target Support Files/Pods-NoteS/Pods-NoteS.debug.xcconfig"; sourceTree = "<group>"; };
 		940597B8D92C077446E09F2C /* Pods-NoteSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSTests.release.xcconfig"; path = "Target Support Files/Pods-NoteSTests/Pods-NoteSTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A13116128730B96008C9111 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9A13116228730B96008C9111 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9A1311762873145B008C9111 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		9A13117828731591008C9111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9A13117B28731D02008C9111 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		9A13117C28731D02008C9111 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		9A4AD5F8286F7BB200510803 /* NoteS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4AD5FB286F7BB200510803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4AD605286F7BB200510803 /* NoteS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteS.xcdatamodel; sourceTree = "<group>"; };
@@ -86,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A13117928731591008C9111 /* CoreData.framework in Frameworks */,
 				19DF5B9A15EED9BE2444C1D6 /* Pods_NoteS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +125,7 @@
 		6641971B1CCDEC51D1696AF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A13117828731591008C9111 /* CoreData.framework */,
 				44BD01DF24E5C1372C4847CC /* Pods_NoteS.framework */,
 				09DEF5F1B75AE8A3E281E508 /* Pods_NoteS_NoteSUITests.framework */,
 				14F9AA2203B86F39B4136B63 /* Pods_NoteSTests.framework */,
@@ -130,6 +144,32 @@
 				940597B8D92C077446E09F2C /* Pods-NoteSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A13116028730B74008C9111 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A13116128730B96008C9111 /* TableViewCell.swift */,
+				9A13116228730B96008C9111 /* TableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9A1311652873123F008C9111 /* Note-Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9A1311762873145B008C9111 /* Note.swift */,
+			);
+			path = "Note-Entity";
+			sourceTree = "<group>";
+		};
+		9A13117A28731CCF008C9111 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				9A13117B28731D02008C9111 /* AddViewController.swift */,
+				9A13117C28731D02008C9111 /* AddViewController.xib */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		9A4AD5EF286F7BB200510803 = {
@@ -157,6 +197,7 @@
 		9A4AD5FA286F7BB200510803 /* NoteS */ = {
 			isa = PBXGroup;
 			children = (
+				9A1311652873123F008C9111 /* Note-Entity */,
 				9A4AD636286F7ECA00510803 /* Comman */,
 				9A4AD631286F7E6800510803 /* Screens */,
 				9A4AD5FB286F7BB200510803 /* AppDelegate.swift */,
@@ -189,6 +230,7 @@
 		9A4AD631286F7E6800510803 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9A13117A28731CCF008C9111 /* Add */,
 				9A4AD635286F7E8D00510803 /* LogIn */,
 				9A4AD634286F7E8300510803 /* SignIn */,
 				9A4AD632286F7E7200510803 /* Home */,
@@ -199,6 +241,7 @@
 		9A4AD632286F7E7200510803 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9A13116028730B74008C9111 /* Cell */,
 				9A4AD641286F867300510803 /* HomeViewController.swift */,
 				9A4AD642286F867300510803 /* HomeViewController.xib */,
 				9A4AD645286F8F5700510803 /* HomeInteractor.swift */,
@@ -345,9 +388,11 @@
 			files = (
 				9A4AD60B286F7BB400510803 /* LaunchScreen.storyboard in Resources */,
 				9A4AD63C286F7F2300510803 /* SignInViewController.xib in Resources */,
+				9A13116428730B96008C9111 /* TableViewCell.xib in Resources */,
 				9A4AD62F286F7DFC00510803 /* GoogleService-Info.plist in Resources */,
 				9A4AD608286F7BB400510803 /* Assets.xcassets in Resources */,
 				9A4AD640286F835B00510803 /* LogInViewController.xib in Resources */,
+				9A13117E28731D02008C9111 /* AddViewController.xib in Resources */,
 				9A4AD644286F867400510803 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,10 +523,13 @@
 			files = (
 				9A4AD5FC286F7BB200510803 /* AppDelegate.swift in Sources */,
 				9A4AD63B286F7F2300510803 /* SignInViewController.swift in Sources */,
+				9A13117D28731D02008C9111 /* AddViewController.swift in Sources */,
 				9A4AD638286F7ED900510803 /* Router.swift in Sources */,
 				9A4AD63F286F835B00510803 /* LogInViewController.swift in Sources */,
 				9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */,
+				9A13116328730B96008C9111 /* TableViewCell.swift in Sources */,
 				9A4AD643286F867400510803 /* HomeViewController.swift in Sources */,
+				9A1311772873145B008C9111 /* Note.swift in Sources */,
 				9A4AD646286F8F5700510803 /* HomeInteractor.swift in Sources */,
 				9A4AD64A286F8F6C00510803 /* HomeEntity.swift in Sources */,
 				9A4AD648286F8F6100510803 /* HomePresenter.swift in Sources */,

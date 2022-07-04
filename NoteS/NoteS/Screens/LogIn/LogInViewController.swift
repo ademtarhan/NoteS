@@ -24,9 +24,6 @@ class LogInViewController: UIViewController {
 
     @IBAction func buttonLogIn(_ sender: Any) {
         validateTextField()
-        
-        
-       
     }
     
     func validateTextField() {
@@ -66,7 +63,6 @@ class LogInViewController: UIViewController {
     
     @IBAction func buttonCreateAccount(_ sender: Any) {
         let siginVC = SignInViewController()
-        //navigationController?.pushViewController(siginVC, animated: true)
         present(siginVC, animated: true, completion: nil)
     }
     
