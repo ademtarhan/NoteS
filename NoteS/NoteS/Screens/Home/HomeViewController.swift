@@ -13,7 +13,7 @@ protocol HomeViewController: AnyObject{
     var presenter: HomePresenter? {get set}
 }
 
-class HomeViewControllerImpl: UIViewController,NSFetchedResultsControllerDelegate {
+class HomeViewControllerImpl: UIViewController,NSFetchedResultsControllerDelegate,HomeViewController {
     @IBOutlet var tableView: UITableView!
 
     var presenter: HomePresenter?

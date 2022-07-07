@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var assembler: Assembler?
     
     var rootViewController: UIViewController? {
-        get { window?.rootViewController }
+        get { return window?.rootViewController }
         set {
             window?.rootViewController = newValue
             window?.makeKeyAndVisible()
@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         initWindow()
         initDI()
+        initUI()
         return true
     }
 

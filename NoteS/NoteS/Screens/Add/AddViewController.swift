@@ -15,7 +15,7 @@ protocol AddViewController: AnyObject{
 
 class AddViewControllerImpl: UIViewController,AddViewController {
     var presenter: AddPresenter?
-    var notes = [String]()
+    var notes = [Note]()
     
 
     var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -30,7 +30,18 @@ class AddViewControllerImpl: UIViewController,AddViewController {
     }
 
     @objc func buttonFinished(_ sender: Any) {
-        print("asdfgfsd")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Note", in: context)
+        let newNote = Note(entity: entity!, insertInto: context)
+        newNote.noteText = textViewNoteContext.text
+        do {
+            try context.save()
+            notes.append(newNote)
+        } catch {
+            print("Not Saved")
+            return
+        }
         navigationController?.popViewController(animated: true)
     }
     
@@ -75,7 +86,4 @@ class AddViewControllerImpl: UIViewController,AddViewController {
             return
         }
     }
-    
-    
-
 }

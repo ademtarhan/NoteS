@@ -12,18 +12,18 @@ import Swinject
 class HomeAssembly: Assembly{
     func assemble(container: Container) {
         container.register(HomeViewController.self){ reg in
-            let viewController = HomeViewControllerImpl(nibName: "HomeViewController", bundle: nil)
+            let viewController: HomeViewController = HomeViewControllerImpl(nibName: "HomeViewController", bundle: nil)
             let presenter = reg.resolve(HomePresenter.self)!
             let interactor = reg.resolve(HomeInteractor.self)!
             let router = reg.resolve(HomeRouter.self)!
             
-            presenter.view = viewController as! HomeViewController
+            presenter.view = viewController
             presenter.router = router
             presenter.interactor = interactor
             interactor.presenter = presenter
             viewController.presenter = presenter
-            router.view = viewController as! HomeViewController
-            return viewController as! HomeViewController
+            router.view = viewController
+            return viewController
         }
         
         container.register(HomePresenter.self){ _ in

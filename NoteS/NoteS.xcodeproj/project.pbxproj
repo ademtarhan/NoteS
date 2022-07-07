@@ -21,7 +21,7 @@
 		9A43434F2876F29C00A78E16 /* AddAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43434E2876F29C00A78E16 /* AddAssembly.swift */; };
 		9A4343512876F41200A78E16 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4343502876F41200A78E16 /* HomeRouter.swift */; };
 		9A4AD5FC286F7BB200510803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD5FB286F7BB200510803 /* AppDelegate.swift */; };
-		9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD604286F7BB200510803 /* NoteS.xcdatamodeld */; };
+		9A4AD606286F7BB200510803 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD604286F7BB200510803 /* Note.xcdatamodeld */; };
 		9A4AD608286F7BB400510803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD607286F7BB400510803 /* Assets.xcassets */; };
 		9A4AD60B286F7BB400510803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD609286F7BB400510803 /* LaunchScreen.storyboard */; };
 		9A4AD616286F7BB400510803 /* NoteSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD615286F7BB400510803 /* NoteSTests.swift */; };
@@ -249,7 +249,7 @@
 				9A4AD607286F7BB400510803 /* Assets.xcassets */,
 				9A4AD609286F7BB400510803 /* LaunchScreen.storyboard */,
 				9A4AD60C286F7BB400510803 /* Info.plist */,
-				9A4AD604286F7BB200510803 /* NoteS.xcdatamodeld */,
+				9A4AD604286F7BB200510803 /* Note.xcdatamodeld */,
 				9A4AD62E286F7DFC00510803 /* GoogleService-Info.plist */,
 			);
 			path = NoteS;
@@ -580,7 +580,7 @@
 				9A4AD638286F7ED900510803 /* Factory.swift in Sources */,
 				9A4343512876F41200A78E16 /* HomeRouter.swift in Sources */,
 				9A4AD63F286F835B00510803 /* LogInViewController.swift in Sources */,
-				9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */,
+				9A4AD606286F7BB200510803 /* Note.xcdatamodeld in Sources */,
 				9A13116328730B96008C9111 /* TableViewCell.swift in Sources */,
 				9AFDE1A62874726D00B7B202 /* AddPresenter.swift in Sources */,
 				9A4AD643286F867400510803 /* HomeViewController.swift in Sources */,
@@ -930,13 +930,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9A4AD604286F7BB200510803 /* NoteS.xcdatamodeld */ = {
+		9A4AD604286F7BB200510803 /* Note.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9A4AD605286F7BB200510803 /* NoteS.xcdatamodel */,
 			);
 			currentVersion = 9A4AD605286F7BB200510803 /* NoteS.xcdatamodel */;
-			path = NoteS.xcdatamodeld;
+			path = Note.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
