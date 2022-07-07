@@ -12,7 +12,6 @@ import FirebaseAuth
 class LogInViewController: UIViewController {
 
     @IBOutlet weak var textfieldEmail: UITextField!
-    
     @IBOutlet weak var textfieldPassword: UITextField!
     
     
@@ -43,6 +42,7 @@ class LogInViewController: UIViewController {
         Auth.auth().signIn(withEmail: textfieldEmail.text!, password: textfieldPassword.text!) { authResult, error in
             if let error = error{
                 print(error.localizedDescription)
+                return
             }
             self.checkUserInfo()
         }
@@ -52,7 +52,7 @@ class LogInViewController: UIViewController {
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
             print(Auth.auth().currentUser?.uid)
-            let homeVC = HomeViewController(nibName: "HomeViewController", bundle: nil)
+            let homeVC = HomeViewControllerImpl(nibName: "HomeViewController", bundle: nil)
             homeVC.modalPresentationStyle = .fullScreen
             self.present(homeVC, animated: true, completion: nil)
         }

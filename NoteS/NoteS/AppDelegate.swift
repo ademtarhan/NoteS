@@ -8,11 +8,13 @@
 import CoreData
 import FirebaseCore
 import UIKit
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
+    var assembler: Assembler?
+    
     var rootViewController: UIViewController? {
         get { window?.rootViewController }
         set {
@@ -24,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         initWindow()
-        initRoot()
-
+        initDI()
         return true
     }
 
@@ -34,16 +35,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
     }
-
-    /// - Initializing root
-    private func initRoot() {
-        let add = Router.shared.add
-        let home = Router.shared.home
-        let signin = Router.shared.signin
-        let login = Router.shared.login
-        let root = UINavigationController(rootViewController: add as! UIViewController)
-        rootViewController = root
+    
+    private func initDI(){
+        assembler = Assembler([
+            //..Screens
+        HomeAssembly()
+        ])
+        assembler?.apply(assembly: FactoryAssembly(assembler: assembler!))
     }
+    
+    func initUI(){
+        let homeViewController = assembler?.resolver.resolve(HomeViewController.self) as! UIViewController
+        rootViewController = UINavigationController(rootViewController: homeViewController)
+    }
+
 
     // MARK: - Core Data stack
 

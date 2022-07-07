@@ -6,27 +6,76 @@
 //
 
 import UIKit
+import CoreData
 
-class AddViewController: UIViewController {
+protocol AddViewController: AnyObject{
+    var presenter: AddPresenter? {get set}
+}
 
-    @IBOutlet weak var textNoteContext: UITextField!
+
+class AddViewControllerImpl: UIViewController,AddViewController {
+    var presenter: AddPresenter?
+    var notes = [String]()
+    
+
+    var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    @IBOutlet weak var textViewNoteContext: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Finished", style: .plain, target: self, action: #selector(buttonFinished))
     }
 
-    @IBAction func buttonFinished(_ sender: Any) {
+    @objc func buttonFinished(_ sender: Any) {
+        print("asdfgfsd")
+        navigationController?.popViewController(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getAllNotes(){
+        do {
+            let note = try persistentContainer.fetch(Note.fetchRequest())
+        } catch {
+            print("Not Readed")
+            return
+        }
     }
-    */
+    
+    
+    func createdNote(context: String){
+        var note = Note(context: persistentContainer)
+        note.noteText = context
+        note.noteDate = Date()
+        do {
+            try persistentContainer.save()
+        } catch {
+            print("Not Created")
+            return
+        }
+    }
+    
+    func deleteNote(note: Note){
+        persistentContainer.delete(note)
+        do {
+            try persistentContainer.save()
+        } catch {
+            print("Not Deleted")
+            return
+        }
+    }
+    
+    func updateData(note: Note, context: String) {
+        note.noteText = context
+        do {
+            try persistentContainer.save()
+        } catch {
+            print("Not Updated")
+            return
+        }
+    }
+    
+    
 
 }

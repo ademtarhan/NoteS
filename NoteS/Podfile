@@ -8,6 +8,7 @@ target 'NoteS' do
   # Pods for NoteS
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
+pod 'Swinject'
 
   target 'NoteSTests' do
     inherit! :search_paths

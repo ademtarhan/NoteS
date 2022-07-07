@@ -7,6 +7,11 @@
 
 import Foundation
 
-class HomeEntity {
+
+protocol HomeEntity: AnyObject{
+    
+}
+
+class HomeEntityImpl: HomeEntity {
     
 }

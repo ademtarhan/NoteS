@@ -16,6 +16,10 @@
 		9A13117928731591008C9111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A13117828731591008C9111 /* CoreData.framework */; };
 		9A13117D28731D02008C9111 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A13117B28731D02008C9111 /* AddViewController.swift */; };
 		9A13117E28731D02008C9111 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A13117C28731D02008C9111 /* AddViewController.xib */; };
+		9A43434A2876F11F00A78E16 /* FactoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4343492876F11F00A78E16 /* FactoryAssembly.swift */; };
+		9A43434D2876F29100A78E16 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43434C2876F29100A78E16 /* HomeAssembly.swift */; };
+		9A43434F2876F29C00A78E16 /* AddAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A43434E2876F29C00A78E16 /* AddAssembly.swift */; };
+		9A4343512876F41200A78E16 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4343502876F41200A78E16 /* HomeRouter.swift */; };
 		9A4AD5FC286F7BB200510803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD5FB286F7BB200510803 /* AppDelegate.swift */; };
 		9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD604286F7BB200510803 /* NoteS.xcdatamodeld */; };
 		9A4AD608286F7BB400510803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD607286F7BB400510803 /* Assets.xcassets */; };
@@ -24,7 +28,7 @@
 		9A4AD620286F7BB400510803 /* NoteSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD61F286F7BB400510803 /* NoteSUITests.swift */; };
 		9A4AD622286F7BB400510803 /* NoteSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD621286F7BB400510803 /* NoteSUITestsLaunchTests.swift */; };
 		9A4AD62F286F7DFC00510803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD62E286F7DFC00510803 /* GoogleService-Info.plist */; };
-		9A4AD638286F7ED900510803 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD637286F7ED900510803 /* Router.swift */; };
+		9A4AD638286F7ED900510803 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD637286F7ED900510803 /* Factory.swift */; };
 		9A4AD63B286F7F2300510803 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD639286F7F2300510803 /* SignInViewController.swift */; };
 		9A4AD63C286F7F2300510803 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AD63A286F7F2300510803 /* SignInViewController.xib */; };
 		9A4AD63F286F835B00510803 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD63D286F835B00510803 /* LogInViewController.swift */; };
@@ -34,6 +38,10 @@
 		9A4AD646286F8F5700510803 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD645286F8F5700510803 /* HomeInteractor.swift */; };
 		9A4AD648286F8F6100510803 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD647286F8F6100510803 /* HomePresenter.swift */; };
 		9A4AD64A286F8F6C00510803 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AD649286F8F6C00510803 /* HomeEntity.swift */; };
+		9A67142428759B1100CD2BC9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67142328759B1100CD2BC9 /* LogInPresenter.swift */; };
+		9A67142628759B1D00CD2BC9 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67142528759B1D00CD2BC9 /* LogInInteractor.swift */; };
+		9AFDE1A62874726D00B7B202 /* AddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFDE1A52874726D00B7B202 /* AddPresenter.swift */; };
+		9AFDE1A82874727700B7B202 /* AddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFDE1A72874727700B7B202 /* AddInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,10 @@
 		9A13117828731591008C9111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9A13117B28731D02008C9111 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9A13117C28731D02008C9111 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		9A4343492876F11F00A78E16 /* FactoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryAssembly.swift; sourceTree = "<group>"; };
+		9A43434C2876F29100A78E16 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		9A43434E2876F29C00A78E16 /* AddAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssembly.swift; sourceTree = "<group>"; };
+		9A4343502876F41200A78E16 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		9A4AD5F8286F7BB200510803 /* NoteS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4AD5FB286F7BB200510803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4AD605286F7BB200510803 /* NoteS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteS.xcdatamodel; sourceTree = "<group>"; };
@@ -80,7 +92,7 @@
 		9A4AD61F286F7BB400510803 /* NoteSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSUITests.swift; sourceTree = "<group>"; };
 		9A4AD621286F7BB400510803 /* NoteSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A4AD62E286F7DFC00510803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9A4AD637286F7ED900510803 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9A4AD637286F7ED900510803 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		9A4AD639286F7F2300510803 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9A4AD63A286F7F2300510803 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		9A4AD63D286F835B00510803 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +102,10 @@
 		9A4AD645286F8F5700510803 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		9A4AD647286F8F6100510803 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		9A4AD649286F8F6C00510803 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		9A67142328759B1100CD2BC9 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		9A67142528759B1D00CD2BC9 /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
+		9AFDE1A52874726D00B7B202 /* AddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPresenter.swift; sourceTree = "<group>"; };
+		9AFDE1A72874727700B7B202 /* AddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInteractor.swift; sourceTree = "<group>"; };
 		AE4D39672F5CC73054830E8E /* Pods-NoteS-NoteSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteS-NoteSUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteS-NoteSUITests/Pods-NoteS-NoteSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,8 +184,36 @@
 			children = (
 				9A13117B28731D02008C9111 /* AddViewController.swift */,
 				9A13117C28731D02008C9111 /* AddViewController.xib */,
+				9AFDE1A52874726D00B7B202 /* AddPresenter.swift */,
+				9AFDE1A72874727700B7B202 /* AddInteractor.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		9A4343472876F10800A78E16 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				9A43434B2876F27700A78E16 /* Screens */,
+				9A4343482876F10F00A78E16 /* Comman */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		9A4343482876F10F00A78E16 /* Comman */ = {
+			isa = PBXGroup;
+			children = (
+				9A4343492876F11F00A78E16 /* FactoryAssembly.swift */,
+			);
+			path = Comman;
+			sourceTree = "<group>";
+		};
+		9A43434B2876F27700A78E16 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9A43434C2876F29100A78E16 /* HomeAssembly.swift */,
+				9A43434E2876F29C00A78E16 /* AddAssembly.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		9A4AD5EF286F7BB200510803 = {
@@ -197,6 +241,7 @@
 		9A4AD5FA286F7BB200510803 /* NoteS */ = {
 			isa = PBXGroup;
 			children = (
+				9A4343472876F10800A78E16 /* DI */,
 				9A1311652873123F008C9111 /* Note-Entity */,
 				9A4AD636286F7ECA00510803 /* Comman */,
 				9A4AD631286F7E6800510803 /* Screens */,
@@ -247,6 +292,7 @@
 				9A4AD645286F8F5700510803 /* HomeInteractor.swift */,
 				9A4AD647286F8F6100510803 /* HomePresenter.swift */,
 				9A4AD649286F8F6C00510803 /* HomeEntity.swift */,
+				9A4343502876F41200A78E16 /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -265,6 +311,8 @@
 			children = (
 				9A4AD63D286F835B00510803 /* LogInViewController.swift */,
 				9A4AD63E286F835B00510803 /* LogInViewController.xib */,
+				9A67142328759B1100CD2BC9 /* LogInPresenter.swift */,
+				9A67142528759B1D00CD2BC9 /* LogInInteractor.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -272,7 +320,7 @@
 		9A4AD636286F7ECA00510803 /* Comman */ = {
 			isa = PBXGroup;
 			children = (
-				9A4AD637286F7ED900510803 /* Router.swift */,
+				9A4AD637286F7ED900510803 /* Factory.swift */,
 			);
 			path = Comman;
 			sourceTree = "<group>";
@@ -521,14 +569,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A43434D2876F29100A78E16 /* HomeAssembly.swift in Sources */,
 				9A4AD5FC286F7BB200510803 /* AppDelegate.swift in Sources */,
 				9A4AD63B286F7F2300510803 /* SignInViewController.swift in Sources */,
+				9A67142428759B1100CD2BC9 /* LogInPresenter.swift in Sources */,
+				9AFDE1A82874727700B7B202 /* AddInteractor.swift in Sources */,
+				9A43434A2876F11F00A78E16 /* FactoryAssembly.swift in Sources */,
+				9A67142628759B1D00CD2BC9 /* LogInInteractor.swift in Sources */,
 				9A13117D28731D02008C9111 /* AddViewController.swift in Sources */,
-				9A4AD638286F7ED900510803 /* Router.swift in Sources */,
+				9A4AD638286F7ED900510803 /* Factory.swift in Sources */,
+				9A4343512876F41200A78E16 /* HomeRouter.swift in Sources */,
 				9A4AD63F286F835B00510803 /* LogInViewController.swift in Sources */,
 				9A4AD606286F7BB200510803 /* NoteS.xcdatamodeld in Sources */,
 				9A13116328730B96008C9111 /* TableViewCell.swift in Sources */,
+				9AFDE1A62874726D00B7B202 /* AddPresenter.swift in Sources */,
 				9A4AD643286F867400510803 /* HomeViewController.swift in Sources */,
+				9A43434F2876F29C00A78E16 /* AddAssembly.swift in Sources */,
 				9A1311772873145B008C9111 /* Note.swift in Sources */,
 				9A4AD646286F8F5700510803 /* HomeInteractor.swift in Sources */,
 				9A4AD64A286F8F6C00510803 /* HomeEntity.swift in Sources */,

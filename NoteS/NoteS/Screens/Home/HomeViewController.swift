@@ -8,9 +8,15 @@
 import CoreData
 import UIKit
 
-class HomeViewController: UIViewController,NSFetchedResultsControllerDelegate {
+
+protocol HomeViewController: AnyObject{
+    var presenter: HomePresenter? {get set}
+}
+
+class HomeViewControllerImpl: UIViewController,NSFetchedResultsControllerDelegate {
     @IBOutlet var tableView: UITableView!
 
+    var presenter: HomePresenter?
     var fetchResultsController = NSFetchedResultsController<NSFetchRequestResult>()
     var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -45,15 +51,17 @@ class HomeViewController: UIViewController,NSFetchedResultsControllerDelegate {
             return
         }
         self.tableView.reloadData()
+        
+        navigationItem.title = "NoteS"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
     }
 
-   
-    @IBAction func buttonAdd(_ sender: Any) {
-        print("tapped button")
-        let addVC = AddViewController(nibName: "AddViewController", bundle: nil)
+    @objc func addTapped(){
+        print("tapped")
+        let addVC = AddViewControllerImpl(nibName: "AddViewController", bundle: nil)
         navigationController?.pushViewController(addVC, animated: true)
-        
     }
+   
     /*
      // MARK: - Navigation
 
@@ -65,7 +73,7 @@ class HomeViewController: UIViewController,NSFetchedResultsControllerDelegate {
      */
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewControllerImpl: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRows = fetchResultsController.sections?[section].numberOfObjects
         return numberOfRows!
@@ -74,8 +82,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         let dataRow = fetchResultsController.object(at: indexPath) as! Note
-        cell.labelNoteDate.text = "1221121"
+       
         cell.labelNoteContext.text = dataRow.noteText
         return cell
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
     }
 }
