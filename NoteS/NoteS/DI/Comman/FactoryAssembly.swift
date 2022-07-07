@@ -19,8 +19,8 @@ class FactoryAssembly: Assembly{
     }
     
     func assemble(container: Container) {
-        container.register(FactoryAssembly.self) { _ in
-            FactoryAssembly(assembler: self.assembler)
+        container.register(Factory.self) { _ in
+            FactoryImple(assembler: self.assembler)
         }
     }
     

@@ -10,7 +10,7 @@ import Foundation
 
 protocol AddPresenter: AnyObject{
     var interactor: AddInteractor? {get set}
-    func saveDatas() -> Note
+    func saveDatas() -> NoteLocalModel
 }
 
 class AddPresenterImpl: AddPresenter{
