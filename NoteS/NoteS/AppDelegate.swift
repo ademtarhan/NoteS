@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         assembler = Assembler([
             //..Screens
         HomeAssembly()
+        AddAssembly()
         ])
         assembler?.apply(assembly: FactoryAssembly(assembler: assembler!))
     }

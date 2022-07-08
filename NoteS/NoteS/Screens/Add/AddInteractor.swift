@@ -10,16 +10,18 @@ import CoreData
 import UIKit
 
 protocol AddInteractor: AnyObject{
-    func saveData() -> Note
+    var presenter: AddPresenter? {get set}
+    func saveData() -> NoteLocalModel
 }
 
 class AddInteractorImpl: AddInteractor{
+    var presenter: AddPresenter?
     
     var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    func saveData() -> Note{
+    func saveData() -> NoteLocalModel{
         let noteDescription = NSEntityDescription.entity(forEntityName: "Note", in: persistentContainer)
-        let newItem = Note(entity: noteDescription!, insertInto: persistentContainer)
+        let newItem = NoteLocalModel(entity: noteDescription!, insertInto: persistentContainer)
         do{
             if persistentContainer.hasChanges{
                 try persistentContainer.save()

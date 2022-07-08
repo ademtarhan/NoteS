@@ -9,14 +9,13 @@ import Foundation
 
 
 protocol AddPresenter: AnyObject{
+    var view: AddViewController? {get set}
     var interactor: AddInteractor? {get set}
-    func saveDatas() -> NoteLocalModel
+    var router: AddRouter? {get set}
 }
 
 class AddPresenterImpl: AddPresenter{
+    var view: AddViewController?
     var interactor: AddInteractor?
-    
-    func saveDatas() -> Note{
-        return (interactor?.saveData())!
-    }
+    var router: AddRouter?
 }
