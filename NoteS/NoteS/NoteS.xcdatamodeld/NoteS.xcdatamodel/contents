@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="NoteLocalModel" representedClassName="NoteLocalModel" syncable="YES" codeGenerationType="class">
+    <entity name="LocalModel" representedClassName=".LocalModel" syncable="YES" codeGenerationType="category">
         <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="text" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="NoteLocalModel" positionX="-63" positionY="0" width="128" height="59"/>
+        <element name="LocalModel" positionX="-63" positionY="0" width="128" height="59"/>
     </elements>
 </model>

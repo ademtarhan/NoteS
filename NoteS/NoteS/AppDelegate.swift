@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initDI(){
         assembler = Assembler([
             //..Screens
-        HomeAssembly()
+            HomeAssembly(),
         AddAssembly()
         ])
         assembler?.apply(assembly: FactoryAssembly(assembler: assembler!))

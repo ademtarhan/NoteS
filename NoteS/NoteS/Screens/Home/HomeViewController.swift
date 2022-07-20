@@ -13,43 +13,23 @@ protocol HomeViewController: AnyObject{
     var presenter: HomePresenter? {get set}
 }
 
-class HomeViewControllerImpl: UIViewController,NSFetchedResultsControllerDelegate,HomeViewController {
+class HomeViewControllerImpl: UIViewController,HomeViewController {
     @IBOutlet var tableView: UITableView!
 
     var presenter: HomePresenter?
-    var fetchResultsController = NSFetchedResultsController<NSFetchRequestResult>()
-    var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-    // ..fetch data in database
-    func fetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
-        let sorter = NSSortDescriptor(key: "noteDate", ascending: true)
-        fetchRequest.sortDescriptors = [sorter]
-        return fetchRequest
-    }
-
-    func getFetchResultController() -> NSFetchedResultsController<NSFetchRequestResult> {
-        
-        fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: persistentContainer, sectionNameKeyPath: nil, cacheName: nil)
-        return fetchResultsController
-    }
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
         let nibCell = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: "cell")
-        fetchResultsController = getFetchResultController()
-        fetchResultsController.delegate = self
         
-        do{
-            try fetchResultsController.performFetch()
-        }catch{
-            print(error)
-            return
-        }
+       
         self.tableView.reloadData()
         
         navigationItem.title = "NoteS"
@@ -75,15 +55,14 @@ class HomeViewControllerImpl: UIViewController,NSFetchedResultsControllerDelegat
 
 extension HomeViewControllerImpl: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRows = fetchResultsController.sections?[section].numberOfObjects
-        return numberOfRows!
+        return 4
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        let dataRow = fetchResultsController.object(at: indexPath) as! Note
        
-        cell.labelNoteContext.text = dataRow.noteText
+       
+        //cell.labelNoteContext.text = dataRow.noteText
         return cell
     }
     
